@@ -31,96 +31,145 @@ body {
   font-family: "Poppins", sans-serif;
 }
 /* ============= Navigation Bar Style ============*/
-.main-container {
-  display: grid;
-  height: 100vh;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(5, 1fr);
-  grid-template-areas:
-    "header header header "
-    "banner banner banner"
-    "player-section player-section player-section"
-    "banner2 banner2 banner2"
-    "footer footer footer";
-}
 
-header {
-  background: #a7ffeb;
-  grid-area: header;
-  width: 100%;
-}
-
-.banner {
-  background: #321fdb;
-  grid-area: banner;
+/* ============= flexiable box  Style ============*/
+.flex-banner {
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
   align-items: center;
+  background-color: brown;
+  width: 100%;
+  padding-bottom: 86px 0;
 }
-.banner-text {
-  margin: 1em;
+
+.top-banner {
+  background-color: #321fdb;
 }
+
 .banner-text h1 {
-  font-size: 4em;
-  font-weight: 700;
-  line-height: 1.5em;
+font-style: normal;
+font-weight: bold;
+font-size: 64px;
+line-height: 80px;
+color: #fff;
+margin-bottom: 30px;
 }
-.banner-title {
+
+.title-text {
   display: block;
+  animation: playerin 1.6s ease  ;
 }
-.banner-image {
+
+.banner-image img {
+  margin: 60px;
+  animation: playerin 5s ease  ;
   max-width: 100%;
 }
+
+/* bannar image animation */
+@keyframes playerin{
+	0% {
+		opacity: 0;
+		transform: translateY(-85px);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0px);
+	}
+}
+
+
+/* ============= Button Style ============*/
 .btn {
   padding: 10px 24px;
   width: 168px;
   height: 44px;
-
-  background: #e02c6d;
+  text-decoration: none;
+  color: #ced2d8;
+  background-color: #e55353;
+  animation: playerin 6s ease;
+  font-weight: bold;
+}
+.btn:hover{
+  background-color: #e21c1c;
 }
 
-.banner2 {
-  background: #24a73a;
-  grid-area: banner2;
+/*  ============ Player section  ============ */
+.player-section {
   display: flex;
-  justify-content: space-around;
-}
-
-/* ++++++++players section++++++++++++ */
-
-.player-section{
-    padding: 70px 180px;
+  flex-direction: column;
+  align-items: center;
 }
 
 .players {
-  background: #ff00eb;
-  grid-area: players;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 30px;
-  
+  margin: 80px;
 }
 .player {
-
   width: 330px;
   height: 474px;
   background: #ffffff;
   box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15);
   overflow: hidden;
+  cursor: pointer;
+  padding: 15px;
+  display: flex;
 }
-.player  img{
-    max-width: 100%;
+.player:hover {
+  transition: 1ms;
+  transform: scale(1.02);
 }
-footer {
-  background-color: #ced2d8;
-  grid-area: footer;
+.player img {
+  max-width: 100%;
 }
+.player-name{
+  font-style: normal;
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 40px;
+  color: #18191F;
+  padding: 0 10px;
+}
+.player-description {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 26px;
+  padding: 0 10px;
+  color: #6c6c6c;
+}
+
+/*  ============ Player section  ============ */
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 
 @media only screen and (max-width: 600px) {
+
   .players {
     grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media only screen and (max-width: 800px) {
+
+  .players {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
