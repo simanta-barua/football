@@ -1,13 +1,13 @@
 :root {
-    --primary: #321fdb;
-    --secondary: #ced2d8;
-    --success: #2eb85c;
-    --info: #421fdbef;
-    --warning: #f9b115;
-    --danger: #e55353;
-    --light: #ebedef;
+  --primary: #321fdb;
+  --secondary: #ced2d8;
+  --success: #2eb85c;
+  --info: #421fdbef;
+  --warning: #f9b115;
+  --danger: #e55353;
+  --light: #ebedef;
 }
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;700&display=swap");
 /* Global Style */
 html,
 body,
@@ -16,7 +16,8 @@ h1,
 h2,
 p,
 span,
-img,ul,
+img,
+ul,
 li {
   margin: 0;
   padding: 0;
@@ -26,17 +27,16 @@ li {
   vertical-align: baseline;
 }
 
-
-body{
-    font-family: 'Poppins', sans-serif;
+body {
+  font-family: "Poppins", sans-serif;
 }
 /* ============= Navigation Bar Style ============*/
-.main-container{
-    display: grid;
-    height: 100vh;
-    grid-template-columns: repeat(3,1fr);
-    grid-template-rows: repeat(5,1fr);
-    grid-template-areas: 
+.main-container {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-template-areas:
     "header header header"
     "banner banner banner"
     "players players players"
@@ -44,28 +44,82 @@ body{
     "footer footer footer";
 }
 
-header{
-    background: #a7ffeb;
-    grid-area: header;
-    width: 100%;
+header {
+  background: #a7ffeb;
+  grid-area: header;
+  width: 100%;
 }
-.banner{
-    background: #e7ffeb;
-    grid-area: banner;
-    display: flex;
-    justify-content: space-around;
+
+.banner {
+  background: #e7ffeb;
+  grid-area: banner;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
-.banner2{
-    background: #24a73a;
-    grid-area: banner2;
-    display: flex;
-    justify-content: space-around;
+.banner-text {
+  margin: 1em;
 }
-.players{
-    background: #ff00eb;
-    grid-area: players;
+.banner-text h1 {
+  font-size: 4em;
+  font-weight: 700;
+  line-height: 1.5em;
 }
-footer{
-    background-color: #ced2d8;
-    grid-area: footer;
+.banner-title {
+  display: block;
+}
+.banner-image {
+  max-width: 100%;
+}
+.btn {
+  padding: 10px 24px;
+  width: 168px;
+  height: 44px;
+
+  background: #e02c6d;
+}
+
+.banner2 {
+  background: #24a73a;
+  grid-area: banner2;
+  display: flex;
+  justify-content: space-around;
+}
+
+/* ++++++++players section++++++++++++ */
+
+
+
+.players {
+  background: #ff00eb;
+  grid-area: players;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  
+
+  
+}
+.player {
+
+  width: 330px;
+  height: 474px;
+  background: #ffffff;
+  box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+}
+.player  img{
+    max-width: 100%;
+}
+footer {
+  background-color: #ced2d8;
+  grid-area: footer;
+}
+
+
+
+
+@media only screen and (max-width: 600px) {
+  .players {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
