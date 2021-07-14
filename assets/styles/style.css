@@ -42,43 +42,45 @@ body {
   width: 100%;
   padding-bottom: 86px 0;
 }
+.half-width{
+  width: 50%;
+}
 
 .top-banner {
   background-color: #321fdb;
 }
 
 .banner-text h1 {
-font-style: normal;
-font-weight: bold;
-font-size: 64px;
-line-height: 80px;
-color: #fff;
-margin-bottom: 30px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 64px;
+  line-height: 80px;
+  color: #fff;
+  margin-bottom: 30px;
 }
 
 .title-text {
   display: block;
-  animation: playerin 1.6s ease  ;
+  animation: playerin 1.6s ease;
 }
 
 .banner-image img {
   margin: 60px;
-  animation: playerin 5s ease  ;
+  animation: playerin 5s ease;
   max-width: 100%;
 }
 
 /* bannar image animation */
-@keyframes playerin{
-	0% {
-		opacity: 0;
-		transform: translateY(-85px);
-	}
-	100% {
-		opacity: 1;
-		transform: translateY(0px);
-	}
+@keyframes playerin {
+  0% {
+    opacity: 0;
+    transform: translateY(-85px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
 }
-
 
 /* ============= Button Style ============*/
 .btn {
@@ -90,8 +92,9 @@ margin-bottom: 30px;
   background-color: #e55353;
   animation: playerin 6s ease;
   font-weight: bold;
+
 }
-.btn:hover{
+.btn:hover {
   background-color: #e21c1c;
 }
 
@@ -125,12 +128,12 @@ margin-bottom: 30px;
 .player img {
   max-width: 100%;
 }
-.player-name{
+.player-name {
   font-style: normal;
   font-weight: bold;
   font-size: 28px;
   line-height: 40px;
-  color: #18191F;
+  color: #18191f;
   padding: 0 10px;
 }
 .player-description {
@@ -144,31 +147,65 @@ margin-bottom: 30px;
 
 /*  ============ Player section  ============ */
 
+/*  ============ Buttom-Banner-Section  ============ */
 
+.buttom-banner {
+  background-color: #ffffff;
+  color: #18191f;
+  
+}
 
+.buttom-text h1 {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 64px;
+  line-height: 80px;
+  color: #000000;
+  margin-bottom: 30px;
+ 
+}
 
+.buttom-text p {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 28px;
+  margin-bottom: 30px;
+  color: #6c6c6c;
+}
+/*  ============ footer section style  ============ */
 
-
-
-
-
-
-
-
-
-
-
-
+.footer-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 65px;
+}
+.footer-section img{
+  max-width: 100%;
+}
+.fab,
+.fas {
+  width: 40px;
+  height: 32px;
+  cursor: pointer;
+  text-decoration: none;
+}
+.footer-section {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 24px;
+}
 
 @media only screen and (max-width: 600px) {
-
   .players {
     grid-template-columns: repeat(1, 1fr);
   }
 }
 
 @media only screen and (max-width: 800px) {
-
   .players {
     grid-template-columns: repeat(2, 1fr);
   }
