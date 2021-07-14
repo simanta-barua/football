@@ -1,0 +1,71 @@
+:root {
+    --primary: #321fdb;
+    --secondary: #ced2d8;
+    --success: #2eb85c;
+    --info: #421fdbef;
+    --warning: #f9b115;
+    --danger: #e55353;
+    --light: #ebedef;
+}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;700&display=swap');
+/* Global Style */
+html,
+body,
+div,
+h1,
+h2,
+p,
+span,
+img,ul,
+li {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+/* ============= Navigation Bar Style ============*/
+.main-container{
+    display: grid;
+    height: 100vh;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(5,1fr);
+    grid-template-areas: 
+    "header header header"
+    "banner banner banner"
+    "players players players"
+    "banner2 banner2 banner2"
+    "footer footer footer";
+}
+
+header{
+    background: #a7ffeb;
+    grid-area: header;
+    width: 100%;
+}
+.banner{
+    background: #e7ffeb;
+    grid-area: banner;
+    display: flex;
+    justify-content: space-around;
+}
+.banner2{
+    background: #24a73a;
+    grid-area: banner2;
+    display: flex;
+    justify-content: space-around;
+}
+.players{
+    background: #ff00eb;
+    grid-area: players;
+}
+footer{
+    background-color: #ced2d8;
+    grid-area: footer;
+}
