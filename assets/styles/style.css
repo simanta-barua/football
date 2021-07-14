@@ -109,7 +109,7 @@ body {
   display: flex;
 }
 .player:hover {
-  transition: 05s all ease;
+  transition: 0.5s all ease;
   transform: scale(1.03);
 }
 .player img {
