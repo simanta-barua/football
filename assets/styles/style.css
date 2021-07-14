@@ -71,14 +71,18 @@ body {
 
 /* ============= Button Style ============*/
 .btn {
-  padding: 10px 24px;
-  width: 168px;
-  height: 44px;
+  display: inline-block;
   text-decoration: none;
-  color: #ced2d8;
-  background-color: #e55353;
-  animation: playerin 6s ease;
-  font-weight: bold;
+  font-size: 25px;
+  font-weight: 600;
+  background: #E02C6D;
+  color: #fff;
+  padding: 15px 45px;
+  padding: 10px 24px;
+  margin-top: 20px;
+}
+.btn:hover{
+  box-shadow: 0px 2px 30px rgba(252, 143, 73, 0.5);
 }
 
 /*  ============ Player section  ============ */
@@ -105,8 +109,8 @@ body {
   display: flex;
 }
 .player:hover {
-  transition: 1ms;
-  transform: scale(1.02);
+  transition: 05s all ease;
+  transform: scale(1.03);
 }
 .player img {
   max-width: 100%;
@@ -140,6 +144,7 @@ body {
   padding: 15px;
 }
 
+
 .buttom-text h1 {
   font-style: normal;
   font-weight: bold;
@@ -157,6 +162,8 @@ body {
   margin-bottom: 30px;
   color: #6c6c6c;
   width: 500px;
+
+
 }
 
 .buttom-image img {
@@ -218,7 +225,7 @@ body {
     flex-direction: column;
     align-items: baseline;
   }
-  .top-banner {
-    background-color: #321fdb;
+  .buttom-text p {
+    width: 100%;
   }
 }
