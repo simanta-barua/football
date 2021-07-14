@@ -1,12 +1,4 @@
-:root {
-  --primary: #321fdb;
-  --secondary: #ced2d8;
-  --success: #2eb85c;
-  --info: #421fdbef;
-  --warning: #f9b115;
-  --danger: #e55353;
-  --light: #ebedef;
-}
+
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;700&display=swap");
 /* Global Style */
 html,
@@ -38,34 +30,36 @@ body {
   justify-content: space-around;
   flex-wrap: wrap;
   align-items: center;
-  background-color: brown;
-  width: 100%;
-  padding-bottom: 86px 0;
+  padding: 86px 15px;
+  
 }
-.half-width{
-  width: 50%;
-}
+
+
 
 .top-banner {
   background-color: #321fdb;
+  
+  
 }
 
 .banner-text h1 {
   font-style: normal;
   font-weight: bold;
-  font-size: 64px;
+  font-size: 4rem;
   line-height: 80px;
   color: #fff;
   margin-bottom: 30px;
+ 
 }
 
 .title-text {
   display: block;
   animation: playerin 1.6s ease;
+  flex-grow: 1;
 }
 
 .banner-image img {
-  margin: 60px;
+  margin-top: 60px;
   animation: playerin 5s ease;
   max-width: 100%;
 }
@@ -152,7 +146,8 @@ body {
 .buttom-banner {
   background-color: #ffffff;
   color: #18191f;
-  
+  padding:15px;
+
 }
 
 .buttom-text h1 {
@@ -173,6 +168,12 @@ body {
   margin-bottom: 30px;
   color: #6c6c6c;
 }
+
+.buttom-image img {
+  margin-top: 41px;
+  max-width: 100%;
+}
+
 /*  ============ footer section style  ============ */
 
 .footer-section {
@@ -201,12 +202,17 @@ body {
 
 @media only screen and (max-width: 600px) {
   .players {
-    grid-template-columns: repeat(1, 1fr);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
   }
+  .flex-banner{
+    flex-direction: column;
+    align-items: baseline;
+  }
+  .top-banner {
+    background-color: #321fdb;
 }
-
-@media only screen and (max-width: 800px) {
-  .players {
-    grid-template-columns: repeat(2, 1fr);
-  }
 }
