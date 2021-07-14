@@ -266,13 +266,12 @@ li:hover{
   .nav-bar{
     
     flex-direction: column;
+    align-items: center;
   }
   .nav-link ul{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 10px;
-    padding: 15px;
 
   }
 }
